@@ -74,6 +74,10 @@ const ApplicationStyles = {
     borderColor: Colors.ember,
     alignItems: 'center',
     textAlign: 'center'
+  },
+    bottom: {
+      justifyContent: 'flex-end',
+      marginBottom: Metrics.baseMargin
   }
 }
 

@@ -1,31 +1,43 @@
 import React, { Component } from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
+import { ScrollView, Text, Image, View ,TouchableOpacity} from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
+import BottomBar from '../Components/BottomBar.js'
 
 import { Images } from '../Themes'
 
 // Styles
 import styles from './Styles/LaunchScreenStyles'
-
+console.tron.log("launchscreen styles: \n",styles)
 export default class LaunchScreen extends Component {
+_onPressButton = ()=>{
+  console.tron.log("pressed the randomizer")
+};
   render () {
     return (
-      <View style={styles.mainContainer}>
+      <View style={[styles.mainContainer , styles.debugBlue]}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-        <ScrollView style={styles.container}>
-          <View style={styles.centered}>
-            <Image source={Images.launch} style={styles.logo} />
-          </View>
-
+        <View style={[styles.container, styles.debugPink]}>
           <View style={styles.section} >
-            <Image source={Images.ready} />
+            {/* <Image source={Images.ready} />*/}
             <Text style={styles.sectionText}>
-              This probably isn't what your app is going to look like. Unless your designer handed you this screen and, in that case, congrats! You're ready to ship. For everyone else, this is where you'll see a live preview of your fully functioning app using Ignite.
+              Tap to randomly choose your training task. Slack off for 5
             </Text>
           </View>
 
-          <DevscreensButton />
-        </ScrollView>
+          <View style={styles.centered}>
+            <TouchableOpacity onPress={this._onPressButton}>
+              <Image source={Images.launch} style={styles.logo} />
+            </TouchableOpacity>
+          </View>
+        </View>
+        <View >
+                    <View >
+            <BottomBar />
+          </View>
+          <View >
+            <DevscreensButton />
+          </View>
+        </View>
       </View>
     )
   }

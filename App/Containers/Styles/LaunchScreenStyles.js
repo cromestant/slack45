@@ -1,10 +1,14 @@
 import { StyleSheet } from 'react-native'
 import { Metrics, ApplicationStyles } from '../../Themes/'
+import DebugStyles from '../../Themes/DebugStyles'
 
-export default StyleSheet.create({
+const styles = StyleSheet.create({
   ...ApplicationStyles.screen,
+  ...DebugStyles,
+  bottom: {...ApplicationStyles.bottom},
   container: {
-    paddingBottom: Metrics.baseMargin
+    paddingBottom: Metrics.baseMargin,
+    flex:1
   },
   logo: {
     marginTop: Metrics.doubleSection,
@@ -16,3 +20,4 @@ export default StyleSheet.create({
     alignItems: 'center'
   }
 })
+export default styles
