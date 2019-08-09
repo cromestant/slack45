@@ -26,6 +26,11 @@ const DebugStyles = {
             borderWidth: 2,
             borderColor: '#1100ff'
         }
+    ,debugRed: {
+            borderRadius: 2,
+            borderWidth: 2,
+            borderColor: '#ff0000'
+        }
   }
 
 export default DebugStyles

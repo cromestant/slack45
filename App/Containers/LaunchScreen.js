@@ -30,13 +30,13 @@ _onPressButton = ()=>{
             </TouchableOpacity>
           </View>
         </View>
-        <View >
-                    <View >
+        <View style={styles.debugRed}>
             <BottomBar />
-          </View>
-          <View >
+          {/*
             <DevscreensButton />
-          </View>
+            
+             
+             */}
         </View>
       </View>
     )

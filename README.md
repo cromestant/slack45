@@ -1,3 +1,11 @@
+This is an app I'm using to learn react using Ignite.
+Migth release it later if I like the outcome. 
+
+Since I can't do any graphic design to save my life, I'm reusing a lot of the layouts made by Ignite team, and their color scheme. all credit to them.
+
+
+
+Left here for legacy
 #  Slack45Min
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
