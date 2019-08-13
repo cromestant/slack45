@@ -16,7 +16,6 @@ ExamplesRegistry.addComponentExample('Rounded Button', () =>
     onPress={() => window.alert('Rounded Button Pressed!')}
   />
 )
-console.tron.log('Rounded button style: ',styles)
 export default class RoundedButton extends Component {
   static propTypes = {
     onPress: PropTypes.func,
@@ -31,7 +30,6 @@ export default class RoundedButton extends Component {
   }
 
   render () {
-    console.tron.log('roundedButton styles:', styles)
     return (
       <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
         <Text style={styles.buttonText}>{this.getText()}</Text>

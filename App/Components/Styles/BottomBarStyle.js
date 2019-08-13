@@ -12,11 +12,11 @@ export default StyleSheet.create({
     justifyContent: 'space-between',
     /*height: 45,
     borderRadius: 5,*/
-    marginHorizontal: Metrics.section,
+    marginHorizontal: Metrics.marginHorizontal,
     marginVertical: Metrics.baseMargin
   },
   icons:{
-    height: 45
+    height: 40
     
     }
   

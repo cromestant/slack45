@@ -8,7 +8,6 @@ const { Types, Creators } = createActions({
   userSuccess: ['avatar'],
   userFailure: null
 })
-
 export const GithubTypes = Types
 export default Creators
 
