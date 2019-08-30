@@ -1,43 +1,43 @@
 import React, { Component } from 'react'
-import { ScrollView, Text,View ,Image, FlatList, ListItem} from 'react-native'
+import { ScrollView, Text,View ,Image, FlatList, KeyboardAvoidingView} from 'react-native'
 import { connect } from 'react-redux'
 import { Images } from '../Themes'
+import ListItem from '../Components/ListItem.js'
 
 // Add Actions - replace 'Your' with whatever your reducer is called :)
 // import YourActions from '../Redux/YourRedux'
+import {TrainingsSelectors} from '../Redux/TrainingsRedux'
 
 // Styles
 import styles from './Styles/EditTrainingScreenStyle'
 
 
 class EditTrainingScreen extends Component {
+  
+
   render () {
-    console.tron.log("from ma props!",this.props.trainings)
+    console.tron.log('state from props', this.props.trainings)
     return (
       <View style={styles.mainContainer}>
         <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />
-        <View style={styles.container}>
-          <View style={styles.section}>
-            {/* <Image source={Images.ready} />*/}
+          <KeyboardAvoidingView behavior='position'>
+            <View style={styles.section}>
             <Text style={styles.sectionText}>
-              Edit training screen
+              Edit trainings
             </Text>
           </View>
-        <ScrollView style={styles.container}>
-        <FlatList
-          data={this.props.trainings.data}
-          renderItem={({item}) => <Text style={styles.item}>{item.title}</Text>}/>
-        </ScrollView>
+          </KeyboardAvoidingView>
       </View>
-    </View>
     )
   }
 }
 
-const mapStateToProps = (state) => {
-  console.tron.log("State is",state.trainings);
+const mapStateToProps = (state,ownProps) => {
+  item_key = ownProps.navigation.getParam('item_key', null);
+  if(item_key === null)
+    return {}
   return {
-    trainings : state.trainings
+        trainings: TrainingsSelectors.getDataForKeySelector(state,item_key)
   }
 }
 

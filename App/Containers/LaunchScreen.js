@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { ScrollView, Text, Image, View ,TouchableOpacity} from 'react-native'
 import DevscreensButton from '../../ignite/DevScreens/DevscreensButton.js'
 import EditTrainingScreen from './EditTrainingScreen.js'
+import ListTrainingsScreen from './ListTrainingsScreen.js'
 
 import BottomBar from '../Components/BottomBar.js'
 import { Images } from '../Themes'
@@ -47,6 +48,7 @@ _onPressButton = (screen)=>{
         </View>
         <View >
             <BottomBar callback={this._onPressButton} /> 
+            <DevscreensButton/>
         </View>
       </View>
     )

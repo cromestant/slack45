@@ -34,7 +34,8 @@ export const INITIAL_STATE = Immutable({
 /* ------------- Selectors ------------- */
 
 export const TrainingsSelectors = {
-  getData: state => state.data
+  getData: state => state.trainings.data,
+  getDataForKeySelector: (state,key) => state.trainings.data.filter(el => el.key === key)
 }
 
 /* ------------- Reducers ------------- */

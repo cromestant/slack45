@@ -78,7 +78,13 @@ const ApplicationStyles = {
     bottom: {
       justifyContent: 'flex-end',
       marginBottom: Metrics.baseMargin
-  }
+  },
+   lists:{
+    listSeparator: {
+    color: Colors.coal,
+    backgroundColor: Colors.ricePaper,
+    height: 1}
+   }
 }
 
 export default ApplicationStyles
